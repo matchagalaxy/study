@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Videos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ytsite.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+
+<header>
+    <img class='banner' src='static/Untitled.jpg'> 
+   
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/videos">Library</a></li>
+    </ul>
+</nav>
+<body>
+
+<div class="content">
+ 
+     <div id="searchFilter">
+        <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchVideos()">Search</button>
+        </div>
+        
+        <div class="searchbar">
+            <select id="tagFilter">
+                <option value="">None</option>
+                <!-- Other options will be added dynamically -->
+            </select>
+            
+            <button onclick="filterVideos()">Filter</button>
+        </div>
+        
+        <div class="searchbar">
+            <select id="sortDropdown">
+                <option value="upload_date">Sort by Date</option>
+                <option value="view_count">Sort by Views</option>
+                <option value="likes">Sort by Likes</option>
+                <option value="video_length">Sort by Length</option>
+            </select>
+            <button id="sortButton">Sort</button>
+        </div>
+
+    </div>
+
+    <div id="videoGrid"></div>
+
+
+</div>
+<div id="pagination">
+    <!-- Pagination buttons will be added dynamically by JS -->
+</div>
+    <script src="{{ url_for('static', filename='ytsite.js') }}"></script>
+</body>
+</html>

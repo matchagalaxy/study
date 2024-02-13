@@ -1,0 +1,62 @@
+<!-- video_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ytsite.css') }}">
+    <script src="{{ url_for('static', filename='ytsite.js') }}"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<header>
+    <img class='banner' src="{{ url_for('static', filename='Untitled.jpg') }}">
+
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/videos">Library</a></li>
+    </ul>
+</nav>
+
+
+<body>
+
+    <div class="content">
+
+    <div class="video-detail-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
+
+        <div class="video-info">
+            <h1>{{ video.title }}</h1>
+            <p>Views: {{ video.view_count }}</p>
+            <p>Upload Date: {{ video.upload_date }}</p>
+            <p>Channel: {{ video.channel_name }}</p>
+            
+            <h4>Key Points</h4>
+            <ul>
+                {% for tip in tips %}
+                <li>{{ tip }}</li>
+                {% endfor %}
+            </ul>
+
+            <h4>Tags</h4>
+            <ul>
+                {% for tag in tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+
+  
+        </div>
+    </div>
+    <h4>Transcript</h4>
+    <div class="transcript-container">
+     
+        <p>{{ transcript }}</p>
+    </div>
+    </div>
+</body>
+</html>

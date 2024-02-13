@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyTube Resource Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ytsite.css') }}">
+    <script src="{{ url_for('static', filename='ytsite.js') }}"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    
+</head>
+
+<header>
+    <img class='banner' src='static/Untitled.jpg'> 
+
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/videos">Library</a></li>
+    </ul>
+</nav>
+<body>
+    <div class="content">
+    <nav>
+        <!-- Navigation items here -->
+    </nav>
+
+
+
+        <div class="guide">
+
+            <h2>Welcome!</h2>
+            <p>This is a project to organize and analyze the studytube genre on YouTube.<br>
+            
+                Click on "Library" above to go straight to the videos, or scroll down for a dashboard and quick overview.
+            </p>
+    
+            <h2> Types of Channels:
+            </h2>
+            
+
+               <h3 id="aes">Aesthetic:</h3> 
+
+                <p>
+                    A genre that focuses on pretty videos and notes.
+                They generally don't show their faces.</p>
+                
+                <h3 id="exp">Expert:</h3>
+               <p>A youtuber that brands themselves as an expert on the subject. 
+                Usually an adult or working professional.</p> 
+                
+                
+                <h3 id="show">Show: </h3>
+                <p>Channels like TED ED, Talks at Google, Crash Course, etc.
+                <br>High production value, usually not based on a single personality or topic. </p>
+                
+                <h3 id="stud">Student:</h3>
+                <p>A youtuber that brands themselves as a fellow student.
+                   <br> Usually an academically successful one, who shares tips that worked for them.</p>
+                
+                <h3 id="vlog">Vlogger:</h3>
+                <p>Similar to a student youtuber, but more holistic(?)
+                <br>They have at most 50% videos pertaining directly to studying, with more vlogs about their travels or school life.
+                
+                
+            </p>
+        </div>
+
+  
+
+    <section id="dashboard">
+        <h2>Interactive Dashboard</h2>
+        <div class='tableauPlaceholder' id='viz1706934619239' style='position: relative'><noscript><a href='#'><img alt='Study With Me ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQZKSJCWN&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;SQZKSJCWN' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SQ&#47;SQZKSJCWN&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1706934619239');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </section>
+    <div class="guide">
+        <h2>Insights</h2>
+        <h3>Top Videos and Top Channels:</h3>
+
+
+
+        <p>Here we have the top ten videos by views, likes, and comments, to give you a quick glance at the best videos according to Youtube's algorithm. 
+<br>
+<br>
+            The only noteworthy outlier here is the top video by comments, which happened because there was a "call to action" in the video. A reminder of how comment count is a metric that can be dependent on something that has nothing to do with the content of the video.
+            
+            <br>
+            <br>
+            Top Channels is mostly to give you an overview of the most successful channels. When set to ALL, Show types dominate because they are usually made by professional groups/have a huge variety of content. 
+            
+            Student type videos have some of the highest like to view ratios, possibly because of the cameraderie the audience may feel towards them. 
+            </p>
+<h3>Types Overview:</h3>
+<p>While there are more Student channels than any other type, Expert channels have created the most videos.<br>
+    This makes sense as Student/Expert types would have the most content focused on studying, and while it's easier to make a small channel with the qualifications of student, experts may treat being a youtuber more seriously and make more videos overall.
+    
+    Show type channels obviously demolish the rest in average subs and views.</p>
+
+
+
+<h3>Quality and Engagement:</h3>
+<p>So these aren't exactly measures of each, but it's a simple way to think about it.
+    Student type videos seem to have the most likes, and Expert type videos are up there when we look at comments.
+    From a cursory look at the videos, Expert videos might have more people say "thanks for the tips", possibly because they are more authoritative in nature?
+    Regardless, that brings us to our next dashboard...</p>
+
+
+<h3>Gender:</h3>
+
+<p>Here we can see the clear difference in terms of gender representation with the types of channels, despite the number of channels for each gender being pretty much equal.
+    Aesthetic and Vlog types are almost completely female, while Expert and Student are majority male.
+    Of course, with my sample size not being very big, it's hard to come to any strong conclusions- but it's still a very noticeable effect.</p>
+
+
+<h3>Tips:</h3>
+<p>Expert type channels make up most of the videos, and Show type the least, so there's nothing too surprising here. The proportion for each type seems similar, which means most likely the type of channel doesnt have much of an effect on what categories of tips will be talked about.</p>
+
+<h3>Corpus Overview:</h3>
+<p>The majority of channels Youtube recommended are more recent, but there are still many classic channels from the past that have survived relevancy.
+
+    The data is also a ~bit~ unbalanced, considering the median videos per channel is 2, but some very prolific channels such as Study with Jess have... 140.
+    </p>
+
+    </div>
+
+
+
+</div>
+<footer>
+    <p>Copyright © 2023 StudyTube Resource Hub </p>
+</footer>
+    
+</body>
+</html>

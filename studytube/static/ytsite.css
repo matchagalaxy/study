@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.banner {
+    max-width:20%;
+max-height:20%;
+}
+header {
+    background-color: #ffffff;
+    color: rgb(103, 52, 52);
+    text-align: center;
+    padding: 15px 0;
+}
+
+header h1 {
+    margin: 40px 40px;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+nav {
+    background-color: #882b2b;
+    display: flex; /* Use flexbox for the navigation */
+    justify-content: center; /* Center flex items horizontally */
+    align-items: center; /* Center flex items vertically */
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for the list */
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #78281d;
+}
+
+
+.guide {
+    margin: 20px 300px;
+}
+
+#aes {
+    color: #5ed8de;
+
+}
+#exp {
+    color: #c72a16;
+
+}
+#show {
+    color: #1ea13d;
+
+}
+#stud {
+    color: #e9d32d;
+
+}
+#vlog {
+    color: #9b81d0;
+
+}
+footer {
+    background-color: #a34242;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.content {
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+   
+    justify-content: center;
+}
+
+.tableauPlaceholder {
+    text-align: center; /* Center horizontally */
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 80%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* 100% of viewport height */
+}
+
+
+/* VIDEOS */
+#videoGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.videoItem {
+    width: calc(25% - 40px); /* Adjust for 4 items per row with 20px gap */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+/* Rest of the CSS remains the same */
+
+
+.videoItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+ 
+}
+
+.videoItem h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.videoItem p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Additional styles for pagination, search buttons, etc. */
+#pagination {
+    text-align: center;
+    margin: 20px;
+}
+
+#pagination button {
+    background-color: #a73728;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    margin: 3px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pagination button:hover {
+    background-color: #78281d;
+}
+
+/* SEARCH BAR */
+
+#searchFilter {
+    background-color: #ffffff;
+    display: flex; /* Use flexbox for the navigation */
+    justify-content: center; /* Center flex items horizontally */
+    align-items: center; /* Center flex items vertically */
+    padding: 20px;
+   gap: 50px;
+
+}
+#searchFilter button {
+    background-color: #a73728;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchFilter button:hover {
+    background-color: #78281d;
+}
+
+
+
+.searchbar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tagFilter {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* VIDEO DETAIL */
+
+.video-detail-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.video-info {
+    max-width: 500px;
+}
+.video-info ul li{
+    margin-bottom: 8px;
+}
+
+.video-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.transcript-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.transcript-container p {
+    text-align: start;
+    line-height: 2;
+
+}
